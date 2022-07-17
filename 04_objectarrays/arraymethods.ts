@@ -1,4 +1,4 @@
-var levels:number[] = [10,20,30,40,50,90,100]
+var levels:number[] = [10,20,30,40,50,90,100];
 // Converts a array to a string as is i.e. with commas
 console.log(levels.toString());
 // Converts a array to a string

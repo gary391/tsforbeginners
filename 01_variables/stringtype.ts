@@ -1,5 +1,7 @@
 var s1:string = "<a href=''/>";
 var username:string  = 'Gaurav'
+
+// Using backtick you can substituate the variable using a ${} notation
 var s2:string = `My name is ${username}`;
 console.log(s2);
 

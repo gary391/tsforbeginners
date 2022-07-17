@@ -1,4 +1,4 @@
-// Number assignment to a variable 
+// Number assignment to a variable
 var n1:number = 10;
 console.log (n1);
 
