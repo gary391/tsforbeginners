@@ -25,7 +25,8 @@ console.log("Sum is: "+ add(1000,2000));
 
 
 // Display function displays information 
-// Making a argument optional using ? in that case undefined will be assigned
+// Making a argument optional using ? in that case undefined will be assigned - NOTE If we only have one parameter 
+// This will not work
 // to that agrument
 // Assigning default value using a equal symbol 
 // function display(id:number, name:string, role?:string) {
