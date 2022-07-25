@@ -1,5 +1,9 @@
-// Ternary operator 
-// testExpression? value1:value2
-var x = 20;
-var y = 10;
-console.log((x < y) ? "x is greater than y" : "y is greater than x");
+// Ternary Operator
+// testExpression?value1:value2
+// test expression is calculated and output is true or false 
+// Based on the result either value1 or value 2 is calculated i.e. true or false. 
+// value1 and value2 can be literal value or expression. 
+var x = 10;
+var y = 20;
+var result = (x > y) ? "X is greater than Y" : "Y is greater than X"; // True:False
+console.log(result);
