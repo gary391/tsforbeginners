@@ -1,3 +1,4 @@
+// Define an interface 
 interface Exterior{
     color:string;
     numOfDoor:Number;
@@ -8,6 +9,7 @@ interface Interior{
     auto:boolean;
 }
 
+// Using extends key word extend the car using Exterior and Interior
 interface Car extends Exterior,Interior{
     make:string;
     model:string;
@@ -24,3 +26,16 @@ var myCar:Car = {
     seat:4,
     auto:true
 }
+
+// Create an object of this interface type 
+
+var deepsCar:Car = {
+    make:"Ford",
+    model:"Mustang",
+    year:2022,
+    color: "Black",
+    numOfDoor:2,
+    seat:2,
+    auto:true
+}
+console.log(deepsCar)

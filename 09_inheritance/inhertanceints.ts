@@ -22,6 +22,7 @@ individual car and bus (companie/make) can inherit from the car and bus classes 
 
 BMW IS-A CAR
 CAR IS-A VEHICLE
+Can't say AUDI IS-A BUS ?
                */
 
 
@@ -62,10 +63,14 @@ class ThreeSeries extends BMW{
     }
     
     // Method in child class, called cruiseControl that will set the flag to enabled
-    cruiseControl(){
+    cruiseControlStart(){
         this.cruiseControlEnabled = true;
         console.log("Cruising");
         
+    }
+    cruiseControlStop(){
+        this.cruiseControlEnabled = false;
+        console.log("Disengage CruiseControl!!!")
     }
     // These method are also present in the parent class, but have been overridden in the child class.
     start(){
@@ -84,9 +89,13 @@ class FiveSeries extends BMW{
         this.parkingAssistEnabled = parkingAssistEnabled;
     }
 
-    parkingAssist(){
+    parkingAssistStart(){
         this.parkingAssistEnabled = true;
         console.log("Car will park it for your!");
+    }
+    parkingAssistStop(){
+        this.parkingAssistEnabled = false;
+        console.log("Disengage Parking Assitance")
     }
     // These method are also present in the parent class, but have been overridden in the child class.
     // Note in order to override the method, they need to exactly same as the parent class i.e. should have
@@ -108,7 +117,8 @@ console.log(threeSeries.year);
 threeSeries.commonEngineFunc();
 threeSeries.start();
 threeSeries.stop();
-threeSeries.cruiseControl();
+threeSeries.cruiseControlStart();
+threeSeries.cruiseControlStop();
 
 
 
@@ -120,4 +130,5 @@ console.log(fiveSeries.year);
 fiveSeries.commonEngineFunc();
 fiveSeries.start();
 fiveSeries.stop();
-fiveSeries.parkingAssist();
+fiveSeries.parkingAssistStart();
+fiveSeries.parkingAssistStop();

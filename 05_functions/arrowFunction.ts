@@ -1,7 +1,7 @@
 // Arrow function or lambda function are shortcuts to define anonymous functions
 
 /*
-<var> 'name of variable' '=' (<paramater>:<type>):<type> '=>' 'value;' or {<return> value;} 
+<var> 'name of variable' '=' (<paramater>:<type>):<type> '=>' 'value; which is the body of the function' or {<return> value;} 
 
 Example:
 
@@ -14,10 +14,18 @@ var doubleMe = (num:number):number=>num*2; or =>{return num*2;}
 // similar fashion to envoke a regular function. 
 
 
-var hello = ():string =>{
+
+var hellomyworld = ():string =>{
+    return "Helloworld!!";
+}
+
+console.log(hellomyworld());
+
+
+var helllo = ():string =>{
     return "Hello!";
 };
-console.log(hello())
+console.log(helllo())
 
 // How pass parameter to an arrow function 
 
@@ -27,7 +35,7 @@ var helloworld = (name: string):string =>{
 };
 console.log(helloworld('Gamma'))
 
-// Write a arrow function that will calculate the product of two numbers
+// Write a arrow function that will calculate the product of two numbersr   
 
 
 var product = (num1: number, num2: number):number=>{
@@ -41,6 +49,7 @@ console.log("Product is: ", product(10,22))
 // Invoke all those 10 arrow function using a loop again
 
 // create a variable array type is any as it is carrying function 
+// create a array, and add values in it. 
 var myarray:Array<any> = [];
 
 for(var i = 0; i<10; i++){

@@ -3,25 +3,45 @@
 // Here If you define a return type as void or you don't specify the return type, 
 // You can update/change it when defining a function. 
 
+// Interface for function:
 interface Add{
     (x:number, y:number):void  // signature of the function, with no return type
 } 
 
 
 interface Sub{
-    (x:number, y:number):void  // signature of the function, with a return type of number 
+    (x:number, y:number):number  // signature of the function, with a return type of number 
 } 
 
+interface Mult{
+    (x:number, y:number):number
+}
 // variable initialization of those particular interfaces
 
 var add:Add; 
 var sub:Sub;
+var mult:Mult;
 
-add=function (x:number, y:number): void {
-console.log(x+y);
+// Here we can't change the name of the parameter as the name of the parameter is governed by the interface. 
+// add=function (x:number, y:string): void { // This will throw an error
+
+// add=function (x:number, y:number): void {
+add=function (x:number, y:number): number { // Here since we are using void return type in the ini  
+// console.log(x+y);
+return (x+y);
 };
 
 // Here we can't add additional parameter as well i.e. z: 
-sub=function (x:number, y:number): number {
-    return x-y;
+// Name of the parameter is not important, just the type and number of parameter is important. 
+// Using the function interface we can enforce that the functions are implemented correctly
+
+sub=function (a:number, b:number): number {
+    return a-b;
+};
+
+// variable can be assigned to the functional expression 
+
+mult= function (x:number, y:number):number {
+    return x*y;
+    
 };

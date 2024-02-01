@@ -45,7 +45,7 @@ var Manager = /** @class */ (function (_super) {
         return _this;
     }
     Manager.prototype.print = function () {
-        _super.prototype.print.call(this);
+        _super.prototype.print.call(this); // Will invoke the super class print method
         console.log("".concat(this.firstName, " ").concat(this.lastName, " - ").concat(this.designation));
     };
     return Manager;
@@ -80,7 +80,7 @@ var Developer = /** @class */ (function (_super) {
     };
     return Developer;
 }(Employee));
-var employees = new Array(new Manager("John", "Cena", "Manger"), new Lead("Gaurav", "Yadav", "Lead"), new Developer("Mayank", "Yadav", "Developer"));
+var employees = new Array(new Manager("John", "Cena", "Manger"), new Lead("Jitu", "Rao", "Lead"), new Developer("Minku", "Rao", "Developer"));
 for (var _i = 0, employees_1 = employees; _i < employees_1.length; _i++) {
     var employee = employees_1[_i];
     employee.print();

@@ -1,23 +1,35 @@
 var levels = [10, 20, 30, 40, 50, 90, 100];
+var marks = [60, 70, 80, 90, 99];
 // Converts a array to a string as is i.e. with commas
 console.log(levels.toString());
-// Converts a array to a string
-console.log(levels.join(" "));
-// cuts an arrary starting for element at index 3 upto but not including element at index 5
+console.log(marks.toString());
+// Converts a array to a string with the separater provided. 
+console.log(levels.join("-"));
+console.log(marks.join("-"));
+// cuts an array starting for element at index 3 upto but not including element at index 5
 // This will create a new arrary and not impact the original array 
 console.log(levels.slice(3, 5));
+console.log(marks.slice(3, 5));
 // Slice the array starting at index 3 upto the end 
 console.log(levels.slice(3));
+console.log(marks.slice(3));
 console.log(levels.toString());
+console.log(marks.toString());
 // Splice function 
 // Can delete and add elements to an array 
 // starts at index 2, and deletes next three elements and then adds 77,88,99 
-levels.splice(2, 3, 77, 88, 99);
+levels.splice(2, 3, 777, 888, 999);
+marks.splice(2, 3, 56, 65);
 console.log(levels.toString());
-// push and pop method 
-levels.push(111, 222, 333);
-console.log(levels.toString());
-// pop removes the last element of the array
+console.log(marks.toString());
+// push and pop method - Similar to a stack model.
+levels.push(111, 222, 4333);
+marks.push(88, 77, 66);
+console.log("Before the pop method: " + levels.toString());
+console.log("Before the pop method: " + marks.toString());
+// pop removes the last element of the array, and if the array is empty it will return undefined. 
 // levels.pop()
 console.log(levels.pop());
-// console.log(levels.toString());
+console.log(marks.pop());
+console.log("After the pop: " + levels.toString());
+console.log("After the pop: " + marks.toString());

@@ -1,5 +1,5 @@
-// const: ON=nce you define a variable with the const prefix
-// it should not be changed. In JAVA its the final key word. 
+// const: Once you define a variable with the const prefix
+// it should not be changed. In JAVA its the `final` key word.
 
 // If you want certain value to remain constant in your program you should use constant 
 
@@ -15,7 +15,7 @@ const pi = 3.14;
 pi = 4.5;
 */
 
-// Good practice to define const against function declarations as well. 
+// **** Good practice to define const against function declarations as well. *****
 
 
 // var product = function (x:number, y:number):number {
@@ -25,7 +25,8 @@ const product = function (x:number, y:number):number {
 
 
 // Here the same variable/function is being reassigned a different function implementation
-// now the product function will calculate the sum instead of multiplication. 
+// now the product function will calculate the sum instead of multiplication if it is defined using var 
+// to avoid this issues we should use const.
 
 product = function (x:number, y:number):number { 
     return x+y;

@@ -34,7 +34,7 @@ class Manager extends Employee{
 
     }
     public print(): void{
-       super.print() 
+       super.print(); // Will invoke the super class print method
        console.log(`${this.firstName} ${this.lastName} - ${this.designation}`)
     }
 }
@@ -67,7 +67,7 @@ class Developer extends Employee{
     }
 }
 
-let employees:Employee[] = new Array(new Manager("John","Cena","Manger"), new Lead("Gaurav", "Yadav", "Lead"), new Developer("Mayank","Yadav","Developer"))
+let employees:Employee[] = new Array(new Manager("John","Cena","Manger"), new Lead("Jitu", "Rao", "Lead"), new Developer("Minku","Rao","Developer"));
 for (var employee of employees ){
     employee.print()
 }

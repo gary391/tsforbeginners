@@ -1,4 +1,4 @@
-// classes are blue prints  
+// classes are blue prints or template for creating objects
 // using classes we can define rules and much more
 // classes are not like interfaces, where in along with the set of rules 
 // we will provide the implementation of the method
@@ -14,7 +14,7 @@ FrequentFlyerNO
  */
 
 class Passenger {
-    // Three property
+    // Three property 
     firstName:string;
     lastName:string;
     frequentFlayerNo:number;
@@ -25,7 +25,7 @@ class Passenger {
 // Constructor in Typescript starts with a constructor key word. 
     constructor(fName:string, lName:string, fflyerNo:number){
         // The parameter in the constructor can be named differently that the class parameter.
-        //Here this points to the current object that is being created
+        // Here this points to the current object that is being created ********
 
         this.firstName = fName;
         this.lastName = lName;
@@ -33,7 +33,7 @@ class Passenger {
     }
 
     // Define function within the class 
-
+    // Display function which is used to display 
     display(){
         console.log(this.firstName+" "+this.lastName+" "+this.frequentFlayerNo);
     }
@@ -44,19 +44,25 @@ class Passenger {
 
 // We can create an object of the class using a new operator
 var passenger = new Passenger("John", "Gamma", 123456);
-// console.log(passenger.firstName+" "+passenger.lastName+" "+passenger.frequentFlayerNo); // If we don't initialize the values you will see undefined in the output. 
-passenger.display(); // Invoking the function present in the class 
+// If we don't initialize the values you will see undefined in the output. 
+// console.log(passenger.firstName+" "+passenger.lastName+" "+passenger.frequentFlayerNo); 
+passenger.display(); // Invoking the function present in the class, in the function display, this refer to the 
+// passenger object. 
 
-var passenger2 = new Passenger("Bob", "Gamma", 654321);
+var passenger2 = new Passenger("Bob", "Beta", 654321);
 // console.log(passenger2.firstName+" "+passenger2.lastName+" "+passenger2.frequentFlayerNo);
 passenger2.display(); // Invoking the function present in the class 
 
-for (let item in passenger){
+for (let item in passenger2){
     // if(item!=="display"){
-    if(passenger[item] instanceof Function){
-        continue;
+
+    // instanceof operator which check if the object passenger[item] is a function where Function is the super class 
+    // and all functions are am instance of this Function 
+    if(passenger2[item] instanceof Function){
+        continue; // Skip the body of this loop once the above condition is met. 
+        // If we use break, once the above mention is met, the loop will break out. 
     }else{
         console.log(item);
-        console.log(passenger[item]);
+        console.log(passenger2[item]);
     }
 }

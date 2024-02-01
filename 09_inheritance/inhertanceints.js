@@ -22,6 +22,7 @@ individual car and bus (companie/make) can inherit from the car and bus classes 
 
 BMW IS-A CAR
 CAR IS-A VEHICLE
+Can't say AUDI IS-A BUS ?
                */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -68,10 +69,15 @@ var ThreeSeries = /** @class */ (function (_super) {
         return _this;
     }
     // Method in child class, called cruiseControl that will set the flag to enabled
-    ThreeSeries.prototype.cruiseControl = function () {
+    ThreeSeries.prototype.cruiseControlStart = function () {
         this.cruiseControlEnabled = true;
         console.log("Cruising");
     };
+    ThreeSeries.prototype.cruiseControlStop = function () {
+        this.cruiseControlEnabled = false;
+        console.log("Disengage CruiseControl!!!");
+    };
+    // These method are also present in the parent class, but have been overridden in the child class.
     ThreeSeries.prototype.start = function () {
         console.log("Button Start");
     };
@@ -87,10 +93,17 @@ var FiveSeries = /** @class */ (function (_super) {
         _this.parkingAssistEnabled = parkingAssistEnabled;
         return _this;
     }
-    FiveSeries.prototype.parkingAssist = function () {
+    FiveSeries.prototype.parkingAssistStart = function () {
         this.parkingAssistEnabled = true;
         console.log("Car will park it for your!");
     };
+    FiveSeries.prototype.parkingAssistStop = function () {
+        this.parkingAssistEnabled = false;
+        console.log("Disengage Parking Assitance");
+    };
+    // These method are also present in the parent class, but have been overridden in the child class.
+    // Note in order to override the method, they need to exactly same as the parent class i.e. should have
+    // same number of parameters etc.
     FiveSeries.prototype.start = function () {
         console.log("Remote Start");
     };
@@ -107,7 +120,8 @@ console.log(threeSeries.year);
 threeSeries.commonEngineFunc();
 threeSeries.start();
 threeSeries.stop();
-threeSeries.cruiseControl();
+threeSeries.cruiseControlStart();
+threeSeries.cruiseControlStop();
 var fiveSeries = new FiveSeries("BMW", "535", 2018, false);
 console.log(fiveSeries.parkingAssistEnabled);
 console.log(fiveSeries.make);
@@ -116,4 +130,5 @@ console.log(fiveSeries.year);
 fiveSeries.commonEngineFunc();
 fiveSeries.start();
 fiveSeries.stop();
-fiveSeries.parkingAssist();
+fiveSeries.parkingAssistStart();
+fiveSeries.parkingAssistStop();

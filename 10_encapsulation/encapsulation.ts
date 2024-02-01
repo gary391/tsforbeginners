@@ -1,7 +1,7 @@
 // What is encapsulation - It is a way to protect the properties and function from other objects 
 // Imagine a capsule
 // the content of the capsule are data/variables and functionailty/method
-// capsule body is the class - method are required to access the variables/data. 
+// capsule body is the class - **** Method are required to access the variables/data. ****
 
 
 // Writing the data and code in one single unit 

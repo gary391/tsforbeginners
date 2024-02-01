@@ -7,7 +7,8 @@
 
 
 
-var x:number = 10;
+var x:number = 50;
 var y:number= 20;
+var output:string =(x>y)?"Z is greater than y":"y is greater then x"
 var result:string = (x>y)?"X is greater than Y":"Y is greater than X"; // True:False
-console.log(result)
+console.log(output)
