@@ -25,9 +25,14 @@ var mult:Mult;
 // Here we can't change the name of the parameter as the name of the parameter is governed by the interface. 
 // add=function (x:number, y:string): void { // This will throw an error
 
+// Here we are providing the method implementation of the method signature as defined in the interface.
+// The return type defined in the interface in not strictly enforced i.e. we can change the return type 
+// at the time of implementation and override what was defined in the interface. This is ONLY VALID IN CASE 
+// OF VOID RETURN TYPE. OR IF YOU DON'T HAVE ANY RETURN TYPE.
+
 // add=function (x:number, y:number): void {
-add=function (x:number, y:number): number { // Here since we are using void return type in the ini  
 // console.log(x+y);
+add=function (x:number, y:number): number { // Here since we are using void return type in the ini  
 return (x+y);
 };
 

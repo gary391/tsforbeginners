@@ -2,11 +2,13 @@
 interface Exterior{
     color:string;
     numOfDoor:Number;
+    Type:string
 }
 
 interface Interior{
     seat:number;
     auto:boolean;
+    interiorColor:string;
 }
 
 // Using extends key word extend the car using Exterior and Interior
@@ -24,9 +26,11 @@ var myCar:Car = {
     color: "Black",
     numOfDoor:4,
     seat:4,
-    auto:true
+    auto:true,
+    Type:"Sedan",
+    interiorColor:"Red"
 }
-
+console.log(myCar)
 // Create an object of this interface type 
 
 var deepsCar:Car = {
@@ -36,6 +40,8 @@ var deepsCar:Car = {
     color: "Black",
     numOfDoor:2,
     seat:2,
-    auto:true
+    auto:true,
+    Type:"race",
+    interiorColor:"Bage"
 }
 console.log(deepsCar)
