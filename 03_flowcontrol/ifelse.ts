@@ -5,7 +5,7 @@
  * The If block is executed if the condition is true, and the else block is executed only when the
  * If block is not excuted. 
  * 
- * if(condition){
+ * if(condition){ // Condition is true then the section the block of code in the bracket is executed
  * }
  * else{
  * }
@@ -21,7 +21,25 @@ if (x>y && x>z){
 }else if (y>x && y>z){
     console.log("Y is greater");
 }else if (z>x && z>y){
-    console.log("Z is greater")
+    console.log("Z is greater");
 }else{
     console.log("Numbers are equal")
+}
+
+var x1:number = 10;
+var y1:number = 20;
+if (x1>y1){
+    console.log("X1 is greater");
+}else{
+    console.log("Y1 is greater");
+}
+
+var x2:number = 40;
+var y2:number = 40;
+if (x2>y2){
+    console.log("x2 is greater");
+}else if(y>x){
+    console.log("y2 is greater");
+}else{
+    console.log("Both the numbers are equal");
 }

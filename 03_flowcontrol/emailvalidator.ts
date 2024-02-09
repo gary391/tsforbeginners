@@ -10,8 +10,12 @@
 //     console.log(`Valid email id ${email}`);
 // }
 
-// Define a variable email string 
+// Define a variable email string
+// We will perform two basic checks one if the string has @ sign and has a dot notation.
 var email:String ="test@test.com"; 
+// indexOf method will return the index where we have the @ symbol.
+// if the @ symbol is not there than a value of -1 will be returned.
+
 var atPostion:number = email.indexOf('@');
 console.log(atPostion);
 var dotPostion:number=email.indexOf('.');
@@ -25,3 +29,17 @@ if((atPostion === -1) || (dotPostion === -1)){
 }else{
     console.log(`May be a valid ${email}`)
 }
+
+
+var excitedString:String = 'Hey!';
+
+var exPostion:number = excitedString.indexOf('!');
+console.log(`exPostion: ${exPostion}`);
+
+if (exPostion === -1){
+    console.log(`you don't sound very excited with a ${excitedString}`)
+}else {
+    console.log ('You sound very excited!!!')
+}
+
+

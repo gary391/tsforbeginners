@@ -4,15 +4,16 @@
  * The If block is executed if the condition is true, and the else block is executed only when the
  * If block is not excuted.
  *
- * if(condition){
+ * if(condition){ // Condition is true then the section the block of code in the bracket is executed
  * }
  * else{
  * }
  
  */
-var x = 10;
+// Program to find the greatest number between three numbers 
+var x = 30;
 var y = 30;
-var z = 40;
+var z = 30;
 if (x > y && x > z) {
     console.log("X is greater");
 }
@@ -24,4 +25,23 @@ else if (z > x && z > y) {
 }
 else {
     console.log("Numbers are equal");
+}
+var x1 = 10;
+var y1 = 20;
+if (x1 > y1) {
+    console.log("X1 is greater");
+}
+else {
+    console.log("Y1 is greater");
+}
+var x2 = 40;
+var y2 = 40;
+if (x2 > y2) {
+    console.log("x2 is greater");
+}
+else if (y > x) {
+    console.log("y2 is greater");
+}
+else {
+    console.log("Both the numbers are equal");
 }

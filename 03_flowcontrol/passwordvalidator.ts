@@ -19,3 +19,14 @@ if((password.charCodeAt(0)>=65)|| password.charCodeAt(90)){
 }else{
     console.log(`Is not a valid: ${password}`)
 }
+
+// Define a variable of type string
+var username:String = "Testuser"
+
+// conditional statement
+
+if (username.charCodeAt(0)>=65 && username.charCodeAt(0)<=90){
+    console.log('valid username');
+} else {
+    console.log('not a valid username')
+}

@@ -1,7 +1,10 @@
 var x = 10;
 var y = 5;
-console.log(x + y);
-console.log(x - y);
-console.log(x * y);
-console.log(x / y);
-console.log(x % y);
+var z = 23;
+console.log(z + x);
+console.log("sum of z and x is: ".concat(x + z));
+console.log("sum of x and y is:".concat(x + y));
+console.log("difference of x and y is ".concat(x - y));
+console.log("mutliple of x and y is ".concat(x * y));
+console.log("division of x and y is ".concat(x / y));
+console.log("modulus of x and y is ".concat(x % y));

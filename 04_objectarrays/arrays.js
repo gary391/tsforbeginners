@@ -9,16 +9,28 @@ cars.push(100);
 for (var i = 0; i < cars.length; i++) {
     console.log(cars[i]);
 }
+console.log("*******************");
+// // name of the subjects
+// var subject:any = ["math", "english", "hebrew", "chinese", "german", 10]
+// // using push method you can define add more elements to an existing array.
+// subject.push("history");
+// subject.push(100);
+// // for traversing over an array we can use for loop. 
+// for(var item=0;i<subject.length;item++){
+//     console.log(item);
+//     console.log(subject[item]);
+// }
 // Type any will allow any type of data to be added in the array
-var courses = ["Angular", "React", "ES6", "JMS", "python", 10];
+var courses = ["Angular", "React", "ES6", "JMS", "python", 101];
 courses.push("Java");
 // using push to add elements in an array
-courses.push(200);
+courses.push(201);
 // for loop to traverse through an array 
 // Make sure there is var at the beginning of the loop
 for (var i = 0; i < courses.length; i++) {
     console.log(courses[i]);
 }
+console.log("*******************");
 // Destructuring 
 // Assigning individual elements to separate element of the code.
 // Similar to unpacking in python!!
@@ -29,6 +41,7 @@ console.log(a);
 console.log(b);
 console.log(c);
 console.log(d);
+console.log("*******************");
 var x = courses[0], y = courses[1], z = courses[2];
 console.log(x);
 console.log(y);

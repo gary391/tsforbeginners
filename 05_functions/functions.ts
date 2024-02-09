@@ -1,5 +1,5 @@
 // Write a function to print hello!
-
+// Function re-use functionality
 /*
 function <name of the function> (<parameter>:<type of parameter>):<Return Type> { body of function
     <return statement>;
@@ -11,7 +11,13 @@ function heello(name:string):string {
     return "Hello World, I am a typescript function! "+name;
 
 }
-function car(name:string):string {
+// Passing a parameter to a function.
+function howareyou(name:string):string {
+    return `How are you ${name}?`
+}
+
+
+function motorcar(name:string):string {
     return `${name} is an awesome car!!`
 
 }
@@ -20,9 +26,11 @@ function company(name:string, index:string):string {
     return `${name} is an FMGC company, listed in ${index}`
 }
 
+console.log(howareyou("Gamma"))
+
 console.log(company('UniLevel', 'nifty'))
 // calling a function in typescript using car()
-console.log(car('BMW'));
+console.log(motorcar('BMW'));
 // Calling a function in typescript using hello()
 console.log(heello("Gamma")); 
 
@@ -45,12 +53,14 @@ function dissplay(id:number, name:string, role?:string) {
     console.log("Name:", name);
 
 // Check for undefined assignment, and display the role only when its is defined
-    // if (role!=undefined){
-    //     console.log("Role:", role);
-    // }
+// the condition below checks for role being present for console.log("Role:", role)
+// to be present.
+    if (role!=undefined){
+        console.log("Role:", role);
+    }
 }
-// dissplay(1, "Gamma", "Admin")
 dissplay(1, "Gamma")
+// dissplay(1, "Gamma")
 // Since we are using an optional parameter ? we can provide two or three parameters 
 // dissplay(1, "Gaurav") 
 
@@ -68,6 +78,8 @@ function display(id:number, name:string, role:string="NormalUser") {
     // }
 }
 display(1, "Beta", "Accounts")
+
+console.log("Using the default value, when the parameter is not passed" + display(1, "Beta"));
 
 // Here we are not passing in the role value, so the default value will be choosen. 
 
@@ -89,21 +101,22 @@ console.log("------------------------------------------------------")
 // Function returning another function, Here the return type will be any
 
  
-function calculator_return(): any{
+function calculator_return(): any{ // Here the function doesn't take parameter
     function diff(num1:number, num2:number):number {
         return num1-num2
     }
     return diff // Here the return value is the inner function
 }
-var sub = calculator_return();
+var sub = calculator_return(); // First
 
 // We will have invoke the diff function to get the output
-console.log(sub(910,100));
+console.log(sub(910,100)); // second
 
 // Shortcut 
 // Here calculator_return()  returns diff
 // diff(20,5) returns 15 which is displayed using console
-console.log(calculator_return()(20,5))
+// Here we are combining the first and second step in a single step.
+console.log(calculator_return()(20,5)) 
 
 
 // Anonymous function  - A function that doesn't have a variable name is called anonymous function 

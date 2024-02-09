@@ -15,5 +15,5 @@ function doubleMe(x:any) {
     }
 
 doubleMe(100);
-doubleMe([1,2,4]); // This is give an error as the function has been overloaded to a specific data type. 
-doubleMe('Gamma');
+// doubleMe([1,2,4]); // This is give an error as the function has been overloaded to a specific data type. 
+doubleMe('John');

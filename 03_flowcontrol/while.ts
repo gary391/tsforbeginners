@@ -4,13 +4,23 @@ i++ value of variable i will be incremented after the line is executed.
 ++i value of the variable will be incremented before the line is executed.
  */
 
-var n:Number = 10;
+// var n:number = 10;
 // Initialize the value of i with a 1;
 // var i = 1; 
-var i = 0; 
-while (i<=n){
-    console.log(i++);
+// var i = 0; 
+// while (i<=n){ // Continue till the condition i.e. i <= n is not full filled. 
+//     console.log(i++);
     // console.log(i);
     // i = i + 1;
-    // i++;
+    // i++; increase the value of i by one.
+// }
+var n1:number = 10;
+var i = 1; 
+console.log("===================");
+// calculate the vaue of n1 till the condition is fullfilled
+// The while loop will continue till n1 is less then equal to 1
+
+while(i<=n1){
+    console.log(`value of n is: ${n1}`);
+    n1 = n1 - 1;
 }

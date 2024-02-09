@@ -1,4 +1,5 @@
 // Write a function to print hello!
+// Function re-use functionality
 /*
 function <name of the function> (<parameter>:<type of parameter>):<Return Type> { body of function
     <return statement>;
@@ -8,15 +9,20 @@ function <name of the function> (<parameter>:<type of parameter>):<Return Type> 
 function heello(name) {
     return "Hello World, I am a typescript function! " + name;
 }
-function car(name) {
+// Passing a parameter to a function.
+function howareyou(name) {
+    return "How are you ".concat(name, "?");
+}
+function motorcar(name) {
     return "".concat(name, " is an awesome car!!");
 }
 function company(name, index) {
     return "".concat(name, " is an FMGC company, listed in ").concat(index);
 }
+console.log(howareyou("Gamma"));
 console.log(company('UniLevel', 'nifty'));
 // calling a function in typescript using car()
-console.log(car('BMW'));
+console.log(motorcar('BMW'));
 // Calling a function in typescript using hello()
 console.log(heello("Gamma"));
 // Need two argument 
@@ -34,12 +40,14 @@ function dissplay(id, name, role) {
     console.log("Id:", id);
     console.log("Name:", name);
     // Check for undefined assignment, and display the role only when its is defined
-    // if (role!=undefined){
-    //     console.log("Role:", role);
-    // }
+    // the condition below checks for role being present for console.log("Role:", role)
+    // to be present.
+    if (role != undefined) {
+        console.log("Role:", role);
+    }
 }
-// dissplay(1, "Gamma", "Admin")
 dissplay(1, "Gamma");
+// dissplay(1, "Gamma")
 // Since we are using an optional parameter ? we can provide two or three parameters 
 // dissplay(1, "Gaurav") 
 // Assigning default value using a equal symbol and then there is no need to check
@@ -56,6 +64,7 @@ function display(id, name, role) {
     // }
 }
 display(1, "Beta", "Accounts");
+console.log("Using the default value, when the parameter is not passed" + display(1, "Beta"));
 // Here we are not passing in the role value, so the default value will be choosen. 
 // display(4, "Beta")
 // Passing function as a parameter to another function
