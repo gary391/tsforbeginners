@@ -7,7 +7,7 @@
 
 // You can defined interface for functions, arrays and classes 
 
-
+// Interfaces in typescript only exist during compile time only.
 /* 
 interface Student {
     // All the property that object subscribe or complies with this interface should have.
