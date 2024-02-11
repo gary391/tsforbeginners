@@ -16,14 +16,16 @@ var Check = /** @class */ (function () {
         Check.bankName = "BOA-India";
         console.log(Check.bankName);
     };
-    Check.bankName = "Bank of America"; // class level property using static keyword
+    // class level property using static keyword
+    Check.bankName = "Bank of America";
     return Check;
 }());
+// Here we didn't define a constructor so we will use the default constructor.
 var check = new Check();
 // Accessing the property using the class name directly as the property is defined as static
-Check.bankName = "BOA";
+// Check.bankName = "BOA-America";
 check.display();
 var check2 = new Check();
 // As we have not defined constructor we can use the default constructor. 
 check.accNo;
-console.log(Check.bankName);
+// console.log(Check.bankName);

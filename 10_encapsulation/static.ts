@@ -9,8 +9,10 @@ routinNo
  */
 // Using static all objects of the class share the properties across
 
+
 class Check{
-    static bankName:string ="Bank of America"; // class level property using static keyword
+    // class level property using static keyword
+    static bankName:string ="Bank of America"; 
     customerName:string;
     accNo:number;
     routingNo:number;
@@ -25,10 +27,11 @@ class Check{
     }
     // getter and setter can be used to manipulate the static method
 }
+// Here we didn't define a constructor so we will use the default constructor.
 
 var check = new Check();
 // Accessing the property using the class name directly as the property is defined as static
-Check.bankName = "BOA"; 
+// Check.bankName = "BOA-America";
 check.display();
 
 var check2 = new Check();
@@ -36,4 +39,4 @@ var check2 = new Check();
 
 check.accNo;
 
-console.log(Check.bankName);
+// console.log(Check.bankName);

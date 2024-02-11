@@ -28,3 +28,16 @@ var student1 = new Student1();
  
 student1.name = "Bob"; // This how you setting the private field.
 console.log(student1.name); // This is how you access the private field. 
+
+// Public 
+class Student3{
+    // public name:string; // Public access specifier
+
+    // read only access specifier - This is a constant and can't be assigned to a 
+    // new value.
+    public readonly name:string = "Johnny!"; 
+
+
+}
+var student3 = new Student3();
+//student3.name = "John!";
