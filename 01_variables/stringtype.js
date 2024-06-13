@@ -4,10 +4,12 @@ var s5 = "all the power is with in you, you can do anything and everything";
 var s1 = "<a href=''/>";
 var username = 'Gaurav';
 var password = 'nowiknowyourpasswords';
+var todayIs = 'Thursday';
 // Using backtick you can substituate the variable using a ${} notation
 var s2 = "My name is ".concat(username);
-var s2 = "You are my buddy ".concat(username);
-var s3 = "your password, is ".concat(password);
+var s3 = "You are my buddy ".concat(username);
+var s4 = "your password, is ".concat(password);
+var s5 = "Today is ".concat(todayIs);
 console.log(s2.length);
 console.log(s2);
 console.log(s3);
@@ -19,4 +21,6 @@ console.log(s3.length);
 console.log(s3.charAt(0)); // character as particular index 
 console.log(s3.indexOf('i'));
 // In order to escape special characters we will have to use back slash.
-console.log(s3.split(','));
+console.log(s3.split(',')[0]);
+console.log(s3.split(',')[1]);
+console.log(s5);

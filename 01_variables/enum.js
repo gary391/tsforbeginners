@@ -1,5 +1,6 @@
-// Collections of constants values separated by commas. 
+// Enum is a collections of constants values separated by commas. 
 // The values in the enum can't be changed but can be ready only 
+// ENUM variable always starts with a capital letter. i.e. Gender, Direction, Shapes, Weekdays etc.
 var Gender;
 (function (Gender) {
     Gender[Gender["Male"] = 0] = "Male";
@@ -40,5 +41,39 @@ var WeekEnds;
     WeekEnds[WeekEnds["Saturday"] = 6] = "Saturday";
     WeekEnds[WeekEnds["Sunday"] = 7] = "Sunday"; // now you can use index of 7 to represent sunday.
 })(WeekEnds || (WeekEnds = {}));
+// we were able to override the default values of 0 and 1 and instead assigned 
+// vaules of 6 and 7.
 console.log(WeekEnds[6]); // This will give you value 
 console.log(WeekEnds[7]);
+var Months;
+(function (Months) {
+    Months[Months["January"] = 0] = "January";
+    Months[Months["February"] = 1] = "February";
+    Months[Months["March"] = 2] = "March";
+    Months[Months["April"] = 3] = "April";
+    Months[Months["May"] = 4] = "May";
+    Months[Months["June"] = 5] = "June";
+    Months[Months["July"] = 6] = "July";
+    Months[Months["August"] = 7] = "August";
+    Months[Months["September"] = 8] = "September";
+    Months[Months["October"] = 9] = "October";
+    Months[Months["November"] = 10] = "November";
+    Months[Months["December"] = 11] = "December";
+})(Months || (Months = {}));
+console.log(Months[0]);
+var FinancialMonths;
+(function (FinancialMonths) {
+    FinancialMonths[FinancialMonths["January"] = 9] = "January";
+    FinancialMonths[FinancialMonths["February"] = 10] = "February";
+    FinancialMonths[FinancialMonths["March"] = 11] = "March";
+    FinancialMonths[FinancialMonths["April"] = 12] = "April";
+    FinancialMonths[FinancialMonths["May"] = 1] = "May";
+    FinancialMonths[FinancialMonths["June"] = 2] = "June";
+    FinancialMonths[FinancialMonths["July"] = 3] = "July";
+    FinancialMonths[FinancialMonths["August"] = 4] = "August";
+    FinancialMonths[FinancialMonths["September"] = 5] = "September";
+    FinancialMonths[FinancialMonths["October"] = 6] = "October";
+    FinancialMonths[FinancialMonths["November"] = 7] = "November";
+    FinancialMonths[FinancialMonths["December"] = 8] = "December";
+})(FinancialMonths || (FinancialMonths = {}));
+console.log(FinancialMonths[1]);

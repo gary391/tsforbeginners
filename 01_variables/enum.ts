@@ -1,5 +1,6 @@
-// Collections of constants values separated by commas. 
+// Enum is a collections of constants values separated by commas. 
 // The values in the enum can't be changed but can be ready only 
+// ENUM variable always starts with a capital letter. i.e. Gender, Direction, Shapes, Weekdays etc.
 enum Gender {
     Male,
     Female
@@ -52,3 +53,36 @@ enum WeekEnds{
 // vaules of 6 and 7.
 console.log(WeekEnds[6]); // This will give you value 
 console.log(WeekEnds[7]);
+
+enum Months{
+    January,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December}
+
+console.log(Months[0]);
+// we can redefine the index of the enum, and 
+enum FinancialMonths {
+    January  = 9,
+    February = 10,
+    March = 11,
+    April = 12,
+    May = 1,
+    June= 2,
+    July= 3,
+    August= 4,
+    September= 5,
+    October= 6,
+    November= 7,
+    December= 8
+}
+
+console.log(FinancialMonths[1]);
