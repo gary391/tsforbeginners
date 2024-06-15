@@ -28,4 +28,16 @@ switch(y){
     default:
     console.log("Default");
 }
-    
+
+
+var z:number = 90;
+switch (z) {
+    case 90:
+    console.log("This is case 90");
+    // break;
+    case 100:
+    console.log("This is case 100");
+    break;
+    default:
+    console.log ("This is Default");
+}

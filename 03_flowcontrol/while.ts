@@ -24,3 +24,19 @@ while(i<=n1){
     console.log(`value of n is: ${n1}`);
     n1 = n1 - 1;
 }
+
+var n2:number = 20;
+var j = 10;
+console.log("===================");
+while(j<=n2) {
+    console.log(`value of n2 is: ${n2}`);
+    n2 = n2 - 1;
+
+}
+console.log("===================");
+var z:number = 100;
+var i = 90;
+
+while (i<=z) {
+    console.log(`value of z is: ${i++}`);
+}

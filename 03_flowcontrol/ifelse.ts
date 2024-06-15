@@ -43,3 +43,17 @@ if (x2>y2){
 }else{
     console.log("Both the numbers are equal");
 }
+
+
+var z1:number = 5;
+var z2:number = 10;
+var z3:number = 15;
+
+if (z1 > z2 && z1 > z3) {
+    console.log("z1 is greatest");
+} else if (z2 > z1 && z2 > z3) {
+    console.log("z2 is greatest")
+} else {
+    console.log("z3 is greatest")
+}
+

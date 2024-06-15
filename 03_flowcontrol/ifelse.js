@@ -45,3 +45,15 @@ else if (y > x) {
 else {
     console.log("Both the numbers are equal");
 }
+var z1 = 5;
+var z2 = 10;
+var z3 = 15;
+if (z1 > z2) {
+    console.log("Z1 is greater");
+}
+else if (z2 > z3) {
+    console.log("z2 is greater");
+}
+else if (z3 > z1) {
+    console.log("z3 is greater");
+}

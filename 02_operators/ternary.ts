@@ -11,7 +11,10 @@
 
 var x:number = 50;
 var y:number= 20;
-var output:string =(x>y)?"X is greater than Y":"Y is greater then X"
+var output:string =(x>y)?"X is greater than Y":"Y is greater then X";
 var result:string = (x<y)?"X is greater than Y":"Y is greater than X"; // True:False
+var IsGreater:string= (x>y)?"x is greater than y": "x is greater than y";
+console.log(IsGreater)
 console.log(output)
 console.log(result)
+

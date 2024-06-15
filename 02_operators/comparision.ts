@@ -5,4 +5,7 @@
 var x:number = 300;
 console.log(x===40); // This will return either true or false value.
 console.log(x===110);
-console.log(x<30);
+console.log(x>30);
+
+var y:number = 400;
+console.log(y!==400);

@@ -9,7 +9,7 @@
 //     console.log('password is not valid! '+ password)
 // }
 // Define a variable of type string 
-var password = "test@123";
+var password = "Test@123";
 // conditional statement
 if ((password.charCodeAt(0) >= 65) || password.charCodeAt(90)) {
     console.log("This is a valid password: ".concat(password));
@@ -25,4 +25,13 @@ if (username.charCodeAt(0) >= 65 && username.charCodeAt(0) <= 90) {
 }
 else {
     console.log('not a valid username');
+}
+var email = "test@test.com";
+var atposition = email.indexOf("@");
+var dotposition = email.lastIndexOf(".");
+if (atposition == -1 || dotposition == -1) {
+    console.log("Invalid email address: ".concat(email));
+}
+else {
+    console.log("Valid email address: ".concat(email));
 }
