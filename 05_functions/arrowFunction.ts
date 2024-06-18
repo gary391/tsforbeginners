@@ -1,14 +1,14 @@
 // Arrow function or lambda function are shortcuts to define anonymous functions
 
 /*
-<var> 'name of variable' '=' (<paramater>:<type>):<type> '=>' 'value; 
+<var> 'name of variable' '=' (<paramater>:<type>):<type> '=>' 'value'; 
 
 which is the body of the function' which is an implicit return or 
 for explicit return use {<return> value;} 
 
 Example:
 
-var doubleMe = (num:number):number=>num*2; or =>{return num*2;}
+var doubleMe = (num:number):number=>num*2; or => {return num*2;}
  */
 
 
@@ -29,7 +29,7 @@ var hellomyworld = ():string =>{
 console.log(hellomyworld());
 
 
-var helllo = ():string =>{
+var helllo = ():string => {
     return "Hello!";
 };
 console.log(helllo())
@@ -39,7 +39,7 @@ console.log(helllo())
 var greetingworld = (country: string):string =>{
     return "Greetings from "+ country;
 }
-console.log(greetingworld('USA'))
+console.log(greetingworld('Pakistan'))
 
 var helloworld = (name: string):string =>{
     return "Hello! world, I am "+ name;
@@ -50,12 +50,16 @@ console.log(helloworld('Gamma'))
 
 
 var products = (num1: number, num2: number):number=>{
-    return num1*num2;
+    return num1*num2; 
 }
 
-console.log("Product is: ", products(10,22))
+console.log("Product is:", products(10,22))
 
+var sum =(num1: number, num2: number):number => {
+    return num1+num2
+}
 
+console.log("Sum is: ", sum(10, 20))
 // How to push ten Arrow function on to an arrays
 // Invoke all those 10 arrow function using a loop again
 

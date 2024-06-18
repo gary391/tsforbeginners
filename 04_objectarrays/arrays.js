@@ -1,3 +1,5 @@
+// How to create an empty array
+var emptyarray = [];
 // Use Any or add a certain type of element to push new elements in the 
 // array
 // Hetrogenous type array
@@ -23,6 +25,7 @@ console.log("*******************");
 // Type any will allow any type of data to be added in the array
 var courses = ["Angular", "React", "ES6", "JMS", "python", 101];
 courses.push("Java");
+courses.push("Spring Security");
 // using push to add elements in an array
 courses.push(201);
 // for loop to traverse through an array 

@@ -52,3 +52,21 @@ function logMessage(): void {
 }
 const logs = logMessage();
 console.log(logs);
+
+/*
+for (var j=0;j<10; j++){
+    console.log(j);
+}
+// Here the variable is accesible outside the block which is not possible in Java etc.
+// where as it is possible here in typescript. 
+console.log(j);
+*/
+
+/*
+// In order to restrict the scope of the variable we can use let.
+// let is block scoped.
+for (let j=0; j<0;j++){
+    console.log(j);
+}
+console.log(j); // This will error out during compilation as j has blocked scope using let
+*/

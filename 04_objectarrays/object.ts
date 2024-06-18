@@ -45,6 +45,16 @@ var employees = {
     lname: "Smith",
     employee_id: "123abc"
 };
+
+var product = {
+    pid: 123,
+    pname: "Iphone",
+    description: "Expensive"
+};
+console.log("*******************");
+console.log(product.pname);
+console.log(product.pid);
+console.log(product.description);
 console.log("*******************");
 // for accessing employee properties you can use dot notation
 console.log(employees.employee_id);
@@ -63,6 +73,13 @@ console.log(child.lName);
 // How to access properties i.e. values of the object ?
 // For in loop for accessing various propeties with in an object.
 // For accessing the value we can use oject[key]
+
+for (var item in product) {
+    console.log(`item: ${item}`);
+    console.log(`value: ${product[item]}`);
+
+}
+
 for (var employee in employees){
     console.log(`employee item: ${employee}`)
     console.log(`employee value: ${employees[employee]}`)
@@ -94,3 +111,7 @@ console.log(firstName+" "+lastName);
 console.log("*******************");
 var{fName, lName} =child;
 console.log(fName+" "+lName);
+console.log("*******************");
+
+var{pname, description} = product;
+console.log(pname+" is "+description)

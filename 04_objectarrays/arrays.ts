@@ -34,7 +34,7 @@ console.log("*******************");
 var courses:any =["Angular", "React", "ES6", "JMS", "python", 101];
 
 courses.push("Java");
-
+courses.push ("Spring Security")
 // using push to add elements in an array
 courses.push(201);
 
@@ -44,15 +44,17 @@ courses.push(201);
 for (var i=0; i<courses.length; i++){
     console.log(courses[i]);
 }
+
 console.log("*******************");
 // Destructuring 
 // Assigning individual elements to separate element of the code.
+// Always start from the left most element. 
 // Similar to unpacking in python!!
 
 var x = courses[0];
 var z = courses[1];
 
-var[a,b,c,d]= cars;
+var[a,b,c,d]= cars; // De-structuring an array 
 console.log(a);
 console.log(b);
 console.log(c);

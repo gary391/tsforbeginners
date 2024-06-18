@@ -1,9 +1,15 @@
 // Write a function to print hello!
 // Function re-use functionality
+// Call or Event placeOrder() This will handle how the order is placed.
+// DisplayPage() could be used to render a page, anywhere.
 /*
 function <name of the function> (<parameter>:<type of parameter>):<Return Type> { body of function
     <return statement>;
 }
+
+function add(num1:number, num2:number):number {
+        return num1+num2;
+    }
 */
 // parameter 
 function heello(name) {
@@ -13,27 +19,36 @@ function heello(name) {
 function howareyou(name) {
     return "How are you ".concat(name, "?");
 }
+// Passing a parameter to a function.
 function motorcar(name) {
     return "".concat(name, " is an awesome car!!");
 }
+// Passing a parameter to a function.
 function company(name, index) {
     return "".concat(name, " is an FMGC company, listed in ").concat(index);
 }
+// Passing a parameter to a function.
+// Here the name is the parameter which is of string type. 
+function iamafunction(name) {
+    return "I Am A Function Named ".concat(name, "!!");
+}
+// Here we need to pass the argument 
+console.log(iamafunction("iamafunction"));
 console.log(howareyou("Gamma"));
 console.log(company('UniLevel', 'nifty'));
 // calling a function in typescript using car()
 console.log(motorcar('BMW'));
 // Calling a function in typescript using hello()
 console.log(heello("Gamma"));
-// Need two argument 
+// Need two parameters  
 function add(num1, num2) {
     return (num1 + num2);
 }
 console.log("Sum is: " + add(2000, 2000));
 console.log("------------------------------------------------------");
 // Display function displays information 
-// Making a argument optional using ? in that case undefined will be assigned - NOTE If we only have one parameter 
-// This will not work
+// Making a argument optional using ? in that case undefined will be assigned 
+//- NOTE If we only have one parameter this will not work
 // to that agrument
 // Assigning default value using a equal symbol 
 function dissplay(id, name, role) {
@@ -83,12 +98,14 @@ function calculator_return() {
     }
     return diff; // Here the return value is the inner function
 }
-var sub = calculator_return();
+var sub = calculator_return(); // First - This will return a sub function 
 // We will have invoke the diff function to get the output
-console.log(sub(910, 100));
+console.log(sub(910, 100)); // second
+console.log(sub(25, 5)); // second
 // Shortcut 
 // Here calculator_return()  returns diff
 // diff(20,5) returns 15 which is displayed using console
+// Here we are combining the first and second step in a single step.
 console.log(calculator_return()(20, 5));
 // Anonymous function  - A function that doesn't have a variable name is called anonymous function 
 // function (<Parameter>):<Return Type>{<return statement>}
@@ -97,5 +114,6 @@ console.log(calculator_return()(20, 5));
 var hello = function (name) {
     return "Hello World, I am a typescript function! " + name;
 };
-console.log(hello('GammaBetaHai!!!'));
+console.log(hello('Gamma!!!'));
 console.log(hello('HelloWorld!!'));
+console.log(hello('Good Day!!!'));

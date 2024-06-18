@@ -22,7 +22,7 @@ console.log("-----------------------------------------")
 // If you have argument other then rest argument you will need to define these before numbers
 // Note the rest param is the last parameter in the parameter list. 
 
-// To restrict the type of numbers you will have to use an array type
+// To restrict the type of numbers you will have to use an array type i.e. number[]
 // Example if the rest param is of string type than we will see string[]
 // Here we are using a number type but we can use string as well. 
     var prod = function (x:number,y:number,...numbers:number[]) {
@@ -37,3 +37,6 @@ console.log("-----------------------------------------")
     }
     
     console.log(product(2,3,4,5))
+
+
+console.log("-----------------------------------------")

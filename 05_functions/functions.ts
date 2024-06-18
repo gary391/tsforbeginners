@@ -1,9 +1,15 @@
 // Write a function to print hello!
 // Function re-use functionality
+// Call or Event placeOrder() This will handle how the order is placed.
+// DisplayPage() could be used to render a page, anywhere.
 /*
 function <name of the function> (<parameter>:<type of parameter>):<Return Type> { body of function
     <return statement>;
 }
+
+function add(num1:number, num2:number):number {
+        return num1+num2;
+    }
 */
 
 // parameter 
@@ -16,16 +22,22 @@ function howareyou(name:string):string {
     return `How are you ${name}?`
 }
 
-
+// Passing a parameter to a function.
 function motorcar(name:string):string {
     return `${name} is an awesome car!!`
 
 }
-
+// Passing a parameter to a function.
 function company(name:string, index:string):string {
     return `${name} is an FMGC company, listed in ${index}`
 }
-
+// Passing a parameter to a function.
+// Here the name is the parameter which is of string type. 
+function iamafunction(name: string):string{
+    return `I Am A Function Named ${name}!!`
+}
+// Here we need to pass the argument 
+console.log(iamafunction("iamafunction"))
 console.log(howareyou("Gamma"))
 
 console.log(company('UniLevel', 'nifty'))
@@ -34,7 +46,7 @@ console.log(motorcar('BMW'));
 // Calling a function in typescript using hello()
 console.log(heello("Gamma")); 
 
-// Need two argument 
+// Need two parameters  
 function add(num1:number, num2:number):number {
     return (num1+num2);
 }
@@ -44,8 +56,8 @@ console.log("Sum is: "+ add(2000,2000));
 console.log("------------------------------------------------------")
 
 // Display function displays information 
-// Making a argument optional using ? in that case undefined will be assigned - NOTE If we only have one parameter 
-// This will not work
+// Making a argument optional using ? in that case undefined will be assigned 
+//- NOTE If we only have one parameter this will not work
 // to that agrument
 // Assigning default value using a equal symbol 
 function dissplay(id:number, name:string, role?:string) {
@@ -107,10 +119,11 @@ function calculator_return(): any{ // Here the function doesn't take parameter
     }
     return diff // Here the return value is the inner function
 }
-var sub = calculator_return(); // First
+var sub = calculator_return(); // First - This will return a sub function 
 
 // We will have invoke the diff function to get the output
 console.log(sub(910,100)); // second
+console.log(sub(25,5)); // second
 
 // Shortcut 
 // Here calculator_return()  returns diff
@@ -130,5 +143,6 @@ var hello = function (name:string):string {
     return "Hello World, I am a typescript function! "+name;
 }
 
-console.log(hello('GammaBetaHai!!!'));
+console.log(hello('Gamma!!!'));
 console.log(hello('HelloWorld!!'));
+console.log(hello('Good Day!!!'));

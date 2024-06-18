@@ -1,13 +1,13 @@
 // Arrow function or lambda function are shortcuts to define anonymous functions
 /*
-<var> 'name of variable' '=' (<paramater>:<type>):<type> '=>' 'value;
+<var> 'name of variable' '=' (<paramater>:<type>):<type> '=>' 'value';
 
 which is the body of the function' which is an implicit return or
 for explicit return use {<return> value;}
 
 Example:
 
-var doubleMe = (num:number):number=>num*2; or =>{return num*2;}
+var doubleMe = (num:number):number=>num*2; or => {return num*2;}
  */
 // Using arrow function print hello!
 // The arrow function is assigned to a variable hello, that variable can be used in a
@@ -28,7 +28,7 @@ console.log(helllo());
 var greetingworld = function (country) {
     return "Greetings from " + country;
 };
-console.log(greetingworld('USA'));
+console.log(greetingworld('Pakistan'));
 var helloworld = function (name) {
     return "Hello! world, I am " + name;
 };
@@ -37,20 +37,21 @@ console.log(helloworld('Gamma'));
 var products = function (num1, num2) {
     return num1 * num2;
 };
-console.log("Product is: ", products(10, 22));
+console.log("Product is:", products(10, 22));
+var sum = function (num1, num2) {
+    return num1 + num2;
+};
+console.log("Sum is: ", sum(10, 20));
 // How to push ten Arrow function on to an arrays
 // Invoke all those 10 arrow function using a loop again
 // create a variable array type is any as it is carrying function 
 // create a array, and add values in it. 
 var myarray = [];
-var _loop_1 = function (i_1) {
+for (var i = 0; i < 10; i++) {
     //<array>.push(Arrow function) which returns index of an array
-    myarray.push(function () { return i_1 * 2; });
-};
-for (var i_1 = 0; i_1 < 10; i_1++) {
-    _loop_1(i_1);
+    myarray.push(function () { return i * 2; });
 }
-console.log(myarray[9]()); // Print the array.
+console.log(myarray[0]()); // Print the array.
 // This how you invoke the function stored in the array.
 // Each element of the array is a arrow function
 for (var i = 0; i < 10; i++) {
