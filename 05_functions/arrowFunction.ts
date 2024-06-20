@@ -35,7 +35,7 @@ var helllo = ():string => {
 console.log(helllo())
 
 // How pass parameter to an arrow function 
-
+// Here the country is the parameter
 var greetingworld = (country: string):string =>{
     return "Greetings from "+ country;
 }

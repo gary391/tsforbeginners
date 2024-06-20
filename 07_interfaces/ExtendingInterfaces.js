@@ -6,16 +6,21 @@ var myCar = {
     color: "Black",
     numOfDoor: 4,
     seat: 4,
-    auto: true
+    auto: true,
+    Type: "Sedan",
+    interiorColor: "Red"
 };
+console.log(myCar);
 // Create an object of this interface type 
 var deepsCar = {
     make: "Ford",
     model: "Mustang",
-    year: 2022,
+    year: 2024,
     color: "Black",
     numOfDoor: 2,
     seat: 2,
-    auto: true
+    auto: true,
+    Type: "race",
+    interiorColor: "Bage"
 };
 console.log(deepsCar);

@@ -36,7 +36,7 @@ console.log(myCar)
 var deepsCar:Car = {
     make:"Ford",
     model:"Mustang",
-    year:2022,
+    year:2024,
     color: "Black",
     numOfDoor:2,
     seat:2,

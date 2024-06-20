@@ -24,8 +24,8 @@ const product = function (x:number, y:number):number {
 // **** Good practice to define const against function declarations as well. *****
 
 
-var product = function (x:number, y:number):number {
-// const product = function (x:number, y:number):number { 
+// var product = function (x:number, y:number):number {
+const product = function (x:number, y:number):number { 
     return x*y;
 }
 

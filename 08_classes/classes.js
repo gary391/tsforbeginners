@@ -5,6 +5,7 @@
 // We can define constructors, accessor method 
 // classes are not just for complied time thing, like for interfaces
 // classes exist at runtime time as well.
+// Interface only exist during the compilation time.
 /*
 Class definition
 firstName
@@ -60,5 +61,63 @@ for (var item in passenger2) {
     else {
         console.log(item);
         console.log(passenger2[item]);
+    }
+}
+// Class NewPassanger
+/*
+Properties:
+firstName
+lastName
+frequentFlyerNo
+
+Steps:
+1. Create a class
+2. Create a object
+3. Initialize properties when the object is created using constructor.
+*/
+var NewPassanger = /** @class */ (function () {
+    // Constructor is function that will allow us to initiallize the properties of the class
+    // when the object is created
+    // The parameter name here can be any name, i.e. can be firstName or fName, lastName or lName, frequentFlyerNo or freqFlyerNo
+    function NewPassanger(firstName, lastName, frequentFlyerNo) {
+        // To access these properties 
+        // Here this will always refer to the current object that is being created.
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.frequentFlyereNo = frequentFlyerNo;
+    }
+    // Function in the class action that the object of the class can do
+    // display function here will display all the properties of the NewPessanger.
+    // function property
+    NewPassanger.prototype.display = function () {
+        console.log(this.firstName + " " + this.lastName + " " + this.frequentFlyereNo);
+    };
+    return NewPassanger;
+}());
+// How to create object of a class ?
+// You can create object of a class using a new operator 
+// Where class name is a method name.
+var newpassanger = new NewPassanger("James", "Bond", 1234);
+// Access the properties using a dot operator
+// If you didn't initialize the properties, then you will get undefined undefined undefined
+// console.log(newpassanger.firstName+ " "+newpassanger.lastName+ " "+ newpassanger.frequentFlyereNo)
+// method available for the object created from the class NewPassanger
+newpassanger.display();
+var newpassanger2 = new NewPassanger("Bob", "Bailey", 4321);
+// Access the properties using a dot operator
+// If you didn't initialize the properties, then you will get undefined undefined undefined
+// console.log(newpassanger2.firstName+ " "+newpassanger2.lastName+ " "+ newpassanger2.frequentFlyereNo)
+newpassanger2.display();
+for (var item in newpassanger) {
+    // How to skip the function?
+    // if (item != 'display'){
+    if (newpassanger[item] instanceof Function) {
+        // Here we identifying the instance is a function 
+        // once that is done using continue we are skipping it.
+        continue;
+    }
+    else {
+        console.log(item);
+        console.log(newpassanger[item]);
     }
 }

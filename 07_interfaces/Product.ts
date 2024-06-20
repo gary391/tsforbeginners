@@ -1,5 +1,7 @@
 // Interface in typescript contains all the rule (Properties and methods) 
 // that an object, array, class must follow 
+// Not used for inheretance
+// Only used at compile time
 
 // Interface acts like a contract that your objects can follow 
 // The concept of interface last till the code is compiled. 
@@ -16,6 +18,14 @@ interface Student {
     score:number;
     display():void; // function or methods as well 
     } 
+
+interface Person {
+    Name: string;
+    Gender: string;
+    Nationality: string;
+    Age: number;
+    display(): void;
+    }
 */
 
 // Interface name product that has some property. 
@@ -89,6 +99,22 @@ var product4:Product = {
     },
     price:900
 }
+// Define a object that complies with the interface.
+// Here the object product4 is complying with the Product interface.
+var product4:Product = {
+    id: 90909,
+    name: "Moto",
+    description: "Motorola Phone",
+    type: "Phone",
+    display(): void{
+        console.log(this.name + "'s last" + this.phone + " was extermely successful!!")
+    },
+    price: 800
+
+}
+
+product4.display()
+
 // What is the reason for using this?
 /*
 The use of `this` makes the method more flexible and reusable because it can 

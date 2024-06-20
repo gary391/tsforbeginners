@@ -16,11 +16,18 @@ interface Sub{
 interface Mult{
     (x:number, y:number):number
 }
+
+interface Div{
+    (x:number, y:number): number
+}
 // variable initialization of those particular interfaces
 
 var add:Add; 
 var sub:Sub;
 var mult:Mult;
+var div:Div;
+
+// Now we can assign these variables to function expressions
 
 // Here we can't change the name of the parameter as the name of the parameter is governed by the interface. 
 // add=function (x:number, y:string): void { // This will throw an error
@@ -32,9 +39,8 @@ var mult:Mult;
 
 // add=function (x:number, y:number): void {
 // console.log(x+y);
-add=function (x:number, y:number): number { // Here since we are using void return type in the ini  
-return (x+y);
-};
+add=function (x:number, y:number): number { // Here since we are using void return type in the interface, we can override the return type in here.
+return (x+y); 
 
 // Here we can't add additional parameter as well i.e. z: 
 // Name of the parameter is not important, just the type and number of parameter is important. 
@@ -50,3 +56,8 @@ mult= function (x:number, y:number):number {
     return x*y;
     
 };
+
+// Here the functional expression of the division is being assigned to div 
+div = function (x:number, y:number):number {
+    return x//y
+}

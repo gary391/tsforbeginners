@@ -11,7 +11,14 @@ interface StudentName{
     // index can be i or ind etc.
     [index:number]:string;
 }
+interface CarBrand{
+    // Here we are defining what type of index we want for my array
+    // And what ever data this array should carry.
+    [index:number]:string;
 
+}
+
+var carBrand:CarBrand = ["Tesla", "Toyota", "GMC", "BYD"];
 // String index based array interface
 // var studentNames: StudentName =["John", "Bob", 2]; 
 var studentNames: StudentName =["John", "Bob", "Doug", "Tim"];
@@ -39,6 +46,7 @@ var studentScores: StudentScore ={}; // This is an object internally / similar t
 studentScores["John"]= 100;
 studentScores["Bob"]= 90;
 studentScores["Doug"]= 80;
+studentScores["James"]=86;
 
 
 for (var item in studentScores){
@@ -68,3 +76,17 @@ console.log("-------------------------------")
 for(let i in studentSubject){
     console.log(`studentSubject: ${i} ` + ` ${studentSubject[i]}`);
 }
+console.log("-------------------------------")
+console.log("-------------------------------")
+var carBrand: CarBrand ={}; 
+carBrand[1] = "Toyota";
+carBrand[2] = "Tesla";
+carBrand[3] = "Honda";
+
+for (let i in carBrand){
+    // console.log(i);
+    console.log(`number ${i} carBrand: ${carBrand[i]}`);
+}
+
+console.log("-------------------------------")
+console.log("-------------------------------")
