@@ -56,3 +56,32 @@ var student = new Student();
 // student._name="John";
 student.setName = "Bill"; // Here set method will be invoked 
 console.log(student.getName); // Here get method will be invoked 
+var NewPerson = /** @class */ (function () {
+    function NewPerson() {
+    }
+    NewPerson.prototype.display = function () {
+        console.log(this._name);
+    };
+    Object.defineProperty(NewPerson.prototype, "getname", {
+        // Access method
+        get: function () {
+            return this._name;
+            //Setter method
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(NewPerson.prototype, "setname", {
+        set: function (name) {
+            this._name = name;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return NewPerson;
+}());
+var newperson = new NewPerson();
+// newperson._name = "John"; // Here the _name property can't be accessed outside the clas. 
+// As the property is private, you can set the value using setter.
+newperson.setname = "Bob";
+console.log(newperson.getname); // Here we are using accessor method to get the name.

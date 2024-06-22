@@ -1,6 +1,11 @@
 /*
+
+Here using `static` we don't need to create an object of a class to use the methods.
+
 Utility method which do not directly affect the object state,
 are good condidates for static methods.
+
+
 
 Example: In case of a calculator where we have sum, sub, mul, div methods 
 that do not need access to object properties, we simply pass in the parameter 
@@ -22,6 +27,9 @@ class Calculator {
     static div(num1:number, num2:number):number{
         return num1/num2;
     }
+    static mod(num1:number, num2:number):number{
+        return num1%num2;
+    }
 }
 
 // Using static - Convert the function in the class to class level function 
@@ -32,4 +40,5 @@ console.log(Calculator.sum(20,20));
 console.log(Calculator.sub(40,20));
 console.log(Calculator.mul(40,20));
 console.log(Calculator.div(40,20));
+console.log(Calculator.mod(40,20));
 

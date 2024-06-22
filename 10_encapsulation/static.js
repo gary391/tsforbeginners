@@ -29,3 +29,26 @@ var check2 = new Check();
 // As we have not defined constructor we can use the default constructor. 
 check.accNo;
 // console.log(Check.bankName);
+var NewCheck = /** @class */ (function () {
+    function NewCheck() {
+    }
+    // In case you want to access your static properties, you can do that using 
+    // methods example display method below, which is available to the object of the class 
+    NewCheck.prototype.display = function () {
+        Check.bankName = "BOA-Online";
+        console.log(Check.bankName);
+    };
+    NewCheck.bankName = "BoA"; // If the bankName is static across all the account you can set it as static
+    return NewCheck;
+}());
+var newcheck = new NewCheck();
+// Access the property using the new object that is created here
+newcheck.accNo;
+// newcheck.bankName; Once the property becomes static, it is a class level property and can't be accessed via object.
+newcheck.customerName;
+newcheck.routingNo;
+console.log(NewCheck.bankName);
+// Overridding it here.
+NewCheck.bankName = "Bank of America";
+console.log(NewCheck.bankName);
+newcheck.display();

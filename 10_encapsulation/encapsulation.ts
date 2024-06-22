@@ -58,4 +58,36 @@ var student = new Student();
 student.setName = "Bill"; // Here set method will be invoked 
 console.log(student.getName); // Here get method will be invoked 
 
- 
+
+class NewPerson {
+    // private property name
+    private _name:string;
+
+    display() {
+        console.log(this._name);
+    }
+    // Access method
+
+    get getname():string {
+        // Any formatting will go inside the getter method.
+        return this._name
+
+    //Setter method
+    }
+    set setname(name:string){
+
+        // Any validation will go here in the setter method.
+        this._name = name;
+
+    }
+
+}
+
+var newperson = new NewPerson();
+// newperson._name = "John"; // Here the _name property can't be accessed outside the clas. 
+// As the property is private, you can set the value using setter.
+
+newperson.setname = "Bob";
+
+console.log(newperson.getname); // Here we are using accessor method to get the name.
+

@@ -41,3 +41,13 @@ class Student3{
 }
 var student3 = new Student3();
 //student3.name = "John!";
+
+class Person {
+    // where name is the public by default
+    // name:string;
+    // Public readonly property, here the value will remain same through out the class.
+    public readonly name:string = "John";
+}
+var person = new Person ();
+// If the property name is readonly, than you can't assign new value 
+// person.name = "John";
