@@ -84,3 +84,87 @@ let employees:Employee[] = new Array(new Manager("John","Cena","Manger", "1234")
 for (var employee of employees ){
     employee.print()
 }
+class NewEmployee{
+    public firstName:string;
+    public lastName:string;
+    public designation:string;
+
+    // Method of the class 
+    public print():void {
+        console.log("Employee Details");
+    }
+}
+
+class NewLead extends NewEmployee{ 
+    // This class extends from the parent class NewEmployee
+    // It has its own print method
+
+    // constructor 
+
+    constructor(firstName:string,lastName:string,designation:string){
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.designation = designation;
+
+    }
+    public print():void {
+        // invokes the parent class print method
+        super.print()
+        console.log(`${this.firstName} ${this.lastName} - ${this.designation}`)
+    }
+
+}
+
+class NewDeveloper extends NewEmployee{ 
+    // This class extends from the parent class NewEmployee
+    // It has its own print method
+
+    // constructor 
+
+    constructor(firstName:string,lastName:string,designation:string){
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.designation = designation;
+
+    }
+    public print():void {
+        // invokes the parent class print method
+        super.print()
+        console.log(`${this.firstName} ${this.lastName} - ${this.designation}`)
+    }
+
+}
+
+class NewManager extends NewEmployee{ 
+    // This class extends from the parent class NewEmployee
+    // It has its own print method
+
+    // constructor 
+
+    constructor(firstName:string,lastName:string,designation:string){
+        // The super will add "Employee details"
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.designation = designation;
+
+    }
+    public print():void {
+        // invokes the parent class print method
+        super.print()
+        console.log(`${this.firstName} ${this.lastName} - ${this.designation}`)
+    }
+
+}
+
+// Instance of a classes 
+// Here we are creating an arrary of the parent class i.e. NewEmployee and adding details from the child classes.
+// The parent type can point to any of the child type dynamically. This is what polymorphism is. 
+let newemployees:NewEmployee[] = new Array(new NewManager("Jeremy", "Jackson", "Manager"), new NewLead("Pallavi", "Bhave","Lead"), new NewDeveloper("gary", "391", "Developer"))
+
+for (var newemployee of newemployees ){
+    newemployee.print();
+
+}

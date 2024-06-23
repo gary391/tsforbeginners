@@ -97,3 +97,77 @@ for (var _i = 0, employees_1 = employees; _i < employees_1.length; _i++) {
     var employee = employees_1[_i];
     employee.print();
 }
+var NewEmployee = /** @class */ (function () {
+    function NewEmployee() {
+    }
+    // Method of the class 
+    NewEmployee.prototype.print = function () {
+        console.log("Employee Details");
+    };
+    return NewEmployee;
+}());
+var NewLead = /** @class */ (function (_super) {
+    __extends(NewLead, _super);
+    // This class extends from the parent class NewEmployee
+    // It has its own print method
+    // constructor 
+    function NewLead(firstName, lastName, designation) {
+        var _this = _super.call(this) || this;
+        _this.firstName = firstName;
+        _this.lastName = lastName;
+        _this.designation = designation;
+        return _this;
+    }
+    NewLead.prototype.print = function () {
+        // invokes the parent class print method
+        _super.prototype.print.call(this);
+        console.log("".concat(this.firstName, " ").concat(this.lastName, " - ").concat(this.designation));
+    };
+    return NewLead;
+}(NewEmployee));
+var NewDeveloper = /** @class */ (function (_super) {
+    __extends(NewDeveloper, _super);
+    // This class extends from the parent class NewEmployee
+    // It has its own print method
+    // constructor 
+    function NewDeveloper(firstName, lastName, designation) {
+        var _this = _super.call(this) || this;
+        _this.firstName = firstName;
+        _this.lastName = lastName;
+        _this.designation = designation;
+        return _this;
+    }
+    NewDeveloper.prototype.print = function () {
+        // invokes the parent class print method
+        _super.prototype.print.call(this);
+        console.log("".concat(this.firstName, " ").concat(this.lastName, " - ").concat(this.designation));
+    };
+    return NewDeveloper;
+}(NewEmployee));
+var NewManager = /** @class */ (function (_super) {
+    __extends(NewManager, _super);
+    // This class extends from the parent class NewEmployee
+    // It has its own print method
+    // constructor 
+    function NewManager(firstName, lastName, designation) {
+        var _this = _super.call(this) || this;
+        _this.firstName = firstName;
+        _this.lastName = lastName;
+        _this.designation = designation;
+        return _this;
+    }
+    NewManager.prototype.print = function () {
+        // invokes the parent class print method
+        _super.prototype.print.call(this);
+        console.log("".concat(this.firstName, " ").concat(this.lastName, " - ").concat(this.designation));
+    };
+    return NewManager;
+}(NewEmployee));
+// Instance of a classes 
+// Here we are creating an arrary of the parent class i.e. NewEmployee and adding details from the child classes.
+// The parent type can point to any of the child type dynamically. This is what polymorphism is. 
+var newemployees = new Array(new NewManager("Jeremy", "Jackson", "Manager"), new NewLead("Pallavi", "Bhave", "Lead"), new NewDeveloper("gary", "391", "Developer"));
+for (var _a = 0, newemployees_1 = newemployees; _a < newemployees_1.length; _a++) {
+    var newemployee = newemployees_1[_a];
+    newemployee.print();
+}
